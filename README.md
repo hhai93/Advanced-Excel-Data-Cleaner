@@ -57,7 +57,7 @@ A powerful VBA script for cleaning and validating Excel data, featuring blank ro
   - Select cleaning tasks (e.g., remove blank rows, validate emails, standardize text).
   - Specify:
     - Maximum value and column for numeric checks.
-    - Column and regex pattern (e.g., `09########` for phone, `EMP####` for custom).
+    - Column and regex pattern (e.g., `0#########` for phone).
     - Column to check against the "Reference" sheet.
   - Click **Run** to clean your data.
   - Use **Undo** to revert changes if needed.
@@ -84,9 +84,9 @@ A powerful VBA script for cleaning and validating Excel data, featuring blank ro
 - 💾 Always back up your Excel file before running.
 - 📬 Email validation targets columns with "Email" in the header (case-insensitive).
 - 📱 Regex validation supports:
-  - "Phone": `09########` or `+84#########`.
+  - "Phone": `0#########`.
   - "Postal": `######`.
-  - "Custom": Any VBA `Like` pattern (e.g., `EMP####`, `[0-3][0-9]-[0-1][0-9]-[2][0][0-9][0-9]`).
+  - "Custom": Any VBA `Like` pattern (e.g., `ABC####`, `[0-3][0-9]-[0-1][0-9]-[2][0][0-9][0-9]`).
 - 🔍 Reference validation requires a "Reference" sheet with valid data in column A.
 - 🔄 Undo is limited to the most recent operation.
 - 🖌️ To modify the UserForm, edit the layout and code in `AdvancedDataCleanerForm.vb`.
