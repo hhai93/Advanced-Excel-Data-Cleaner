@@ -42,33 +42,40 @@ A powerful VBA script for cleaning and validating Excel data, featuring blank ro
   | PROD002       |
 
 ### 2. Add the VBA Script
-- Open your Excel file.
-- Press `Alt + F11` to open the VBA editor.
-- Go to **File** > **Import File** and import `AdvancedDataCleanerForm.frm`.
-- Insert a new module and paste the code from [`ShowAdvancedDataCleaner.vba`](ShowAdvancedDataCleaner.vba).
+- Open your Excel file and press `Alt + F11` to open the VBA editor.
+- **Add UserForm**:
+  - Insert a new UserForm named `AdvancedDataCleanerForm`.
+  - Add controls as described in [`AdvancedDataCleanerForm.vb`](AdvancedDataCleanerForm.vb) under "UserForm Layout".
+  - Copy and paste the code from "UserForm Code" section into the UserForm's code window.
+- **Add Module**:
+  - Insert a new module and paste the code from [`ShowAdvancedDataCleaner.vba`](ShowAdvancedDataCleaner.vba).
+- Save the Excel file as `.xlsm` (macro-enabled).
 
 ### 3. Run the Script
-- Run `ShowAdvancedDataCleaner` to open the UserForm.
-- Select cleaning tasks (e.g., remove blank rows, validate emails, standardize text).
-- Specify:
-  - Maximum value and column for numeric checks.
-  - Column and regex pattern for validation (e.g., "0#########" for phone, "EMP####" for custom).
-  - Column to check against the "Reference" sheet.
-- Click **Run** to clean your data.
-- Use **Undo** to revert changes if needed.
+- Press `Alt + F8`, select `ShowAdvancedDataCleaner`, and run.
+- In the UserForm:
+  - Select cleaning tasks (e.g., remove blank rows, validate emails, standardize text).
+  - Specify:
+    - Maximum value and column for numeric checks.
+    - Column and regex pattern (e.g., `09########` for phone, `EMP####` for custom).
+    - Column to check against the "Reference" sheet.
+  - Click **Run** to clean your data.
+  - Use **Undo** to revert changes if needed.
 - 🎉 Review the detailed summary report!
 
 ---
 
 ## 🛠️ Code Explanation
-- **`AdvancedDataCleanerForm`**: UserForm for interactive task selection.
-- **`RemoveDuplicates`**: Deletes duplicate rows based on specified columns.
-- **`Trim & UCase`**: Standardizes text across cells.
-- **`Email Validation`**: Highlights emails missing "@" or ".".
-- **`Regex-like Validation`**: Checks formats using VBA `Like` operator (predefined or custom patterns).
-- **`Reference Check`**: Validates data against a "Reference" sheet.
-- **`Undo`**: Restores data from a hidden backup sheet.
-- **`Numeric Check`**: Flags values exceeding a threshold.
+- **`AdvancedDataCleanerForm.vb`**: Defines the UserForm layout and logic for interactive task selection.
+- **`ShowAdvancedDataCleaner.vba`**: Simple module to launch the UserForm.
+- **Functionality**:
+  - `RemoveDuplicates`: Deletes duplicate rows based on specified columns.
+  - `Trim & UCase`: Standardizes text across cells.
+  - `Email Validation`: Highlights emails missing "@" or ".".
+  - `Regex-like Validation`: Checks formats using VBA `Like` operator (predefined or custom patterns).
+  - `Reference Check`: Validates data against a "Reference" sheet.
+  - `Undo`: Restores data from a hidden backup sheet.
+  - `Numeric Check`: Flags values exceeding a threshold.
 - 🔄 Comprehensive reporting with regex pattern details.
 
 ---
@@ -77,9 +84,9 @@ A powerful VBA script for cleaning and validating Excel data, featuring blank ro
 - 💾 Always back up your Excel file before running.
 - 📬 Email validation targets columns with "Email" in the header (case-insensitive).
 - 📱 Regex validation supports:
-  - "Phone": `0#########` or `+84#########`.
+  - "Phone": `09########` or `+84#########`.
   - "Postal": `######`.
   - "Custom": Any VBA `Like` pattern (e.g., `EMP####`, `[0-3][0-9]-[0-1][0-9]-[2][0][0-9][0-9]`).
 - 🔍 Reference validation requires a "Reference" sheet with valid data in column A.
 - 🔄 Undo is limited to the most recent operation.
-- 🖌️ UserForm requires importing `.frm` file—see [VBA documentation](https://docs.microsoft.com/en-us/office/vba).
+- 🖌️ To modify the UserForm, edit the layout and code in `AdvancedDataCleanerForm.vb`.
