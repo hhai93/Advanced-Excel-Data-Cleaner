@@ -48,11 +48,11 @@ A powerful VBA script for cleaning and validating Excel data, featuring blank ro
   - Add controls as described in [`AdvancedDataCleanerForm.vb`](AdvancedDataCleanerForm.vb) under "UserForm Layout".
   - Copy and paste the code from "UserForm Code" section into the UserForm's code window.
 - **Add Module**:
-  - Insert a new module and paste the code from [`ShowAdvancedDataCleaner.vba`](ShowAdvancedDataCleaner.vba).
+  - Insert a new module and paste the code from [`AdvancedDataCleaner.vba`](AdvancedDataCleaner.vba).
 - Save the Excel file as `.xlsm` (macro-enabled).
 
 ### 3. Run the Script
-- Press `Alt + F8`, select `ShowAdvancedDataCleaner`, and run.
+- Press `Alt + F8`, select `AdvancedDataCleaner`, and run.
 - In the UserForm:
   - Select cleaning tasks (e.g., remove blank rows, validate emails, standardize text).
   - Specify:
@@ -67,7 +67,7 @@ A powerful VBA script for cleaning and validating Excel data, featuring blank ro
 
 ## 🛠️ Code Explanation
 - **`AdvancedDataCleanerForm.vb`**: Defines the UserForm layout and logic for interactive task selection.
-- **`ShowAdvancedDataCleaner.vba`**: Simple module to launch the UserForm.
+- **`AdvancedDataCleaner.vba`**: Simple module to launch the UserForm.
 - **Functionality**:
   - `RemoveDuplicates`: Deletes duplicate rows based on specified columns.
   - `Trim & UCase`: Standardizes text across cells.
