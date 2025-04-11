@@ -1,3 +1,3 @@
-Sub ShowAdvancedDataCleaner()
+Sub AdvancedDataCleaner()
     AdvancedDataCleanerForm.Show
 End Sub
