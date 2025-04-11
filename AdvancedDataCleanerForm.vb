@@ -48,14 +48,14 @@ Private Sub UserForm_Initialize()
     End With
     
     ' Default regex pattern
-    txtRegexPattern.Value = "09########"
+    txtRegexPattern.Value = "0#########"
 End Sub
 
 Private Sub cmbRegexType_Change()
     ' Update default pattern based on regex type
     Select Case cmbRegexType.Value
         Case "Phone"
-            txtRegexPattern.Value = "09########"
+            txtRegexPattern.Value = "0#########"
         Case "Postal"
             txtRegexPattern.Value = "######"
         Case "Custom"
