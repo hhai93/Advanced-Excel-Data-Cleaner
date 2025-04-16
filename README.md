@@ -45,7 +45,7 @@ A powerful VBA script for cleaning and validating Excel data, featuring blank ro
 - Open your Excel file and press `Alt + F11` to open the VBA editor.
 - **Add UserForm**:
   - Insert a new UserForm named `AdvancedDataCleanerForm`.
-  - Add controls as described in [`AdvancedDataCleanerForm.vb`](AdvancedDataCleanerForm.vb) under "UserForm Layout".
+  - Add controls as described in [`AdvancedDataCleanerForm.vba`](AdvancedDataCleanerForm.vb) under "UserForm Layout".
   - Copy and paste the code from "UserForm Code" section into the UserForm's code window.
 - **Add Module**:
   - Insert a new module and paste the code from [`AdvancedDataCleaner.vba`](AdvancedDataCleaner.vba).
@@ -66,7 +66,7 @@ A powerful VBA script for cleaning and validating Excel data, featuring blank ro
 ---
 
 ## 🛠️ Code Explanation
-- **`AdvancedDataCleanerForm.vb`**: Defines the UserForm layout and logic for interactive task selection.
+- **`AdvancedDataCleanerForm.vba`**: Defines the UserForm layout and logic for interactive task selection.
 - **`AdvancedDataCleaner.vba`**: Simple module to launch the UserForm.
 - **Functionality**:
   - `RemoveDuplicates`: Deletes duplicate rows based on specified columns.
@@ -89,4 +89,4 @@ A powerful VBA script for cleaning and validating Excel data, featuring blank ro
   - "Custom": Any VBA `Like` pattern (e.g., `ABC####`, `[0-3][0-9]-[0-1][0-9]-[2][0][0-9][0-9]`).
 - 🔍 Reference validation requires a "Reference" sheet with valid data in column A.
 - 🔄 Undo is limited to the most recent operation.
-- 🖌️ To modify the UserForm, edit the layout and code in `AdvancedDataCleanerForm.vb`.
+- 🖌️ To modify the UserForm, edit the layout and code in `AdvancedDataCleanerForm.vba`.
