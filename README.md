@@ -1,4 +1,4 @@
-# 🧹 Advanced Excel Data Cleaner
+# Advanced Excel Data Cleaner
 
 ![GitHub](https://img.shields.io/badge/license-MIT-blue.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/hhai93/Advanced-Excel-Data-Cleaner)
 
